@@ -1,0 +1,12 @@
+package org.kd.predicate;
+
+import org.kd.Apple;
+
+import java.util.function.Predicate;
+
+class GreenApplePredicate implements Predicate<Apple> {
+    @Override
+    public boolean test(Apple apple) {
+        return apple.getColor().equalsIgnoreCase("green");
+    }
+}
