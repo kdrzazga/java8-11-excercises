@@ -2,6 +2,7 @@ package org.kd;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 public class ObjectsFactory {
     public ObjectsFactory() {
@@ -36,5 +37,9 @@ public class ObjectsFactory {
 
     public final List<List<List<String>>> createListOfListOfLists() {
         return List.of(new ObjectsFactory().createListOfLists());
+    }
+
+    public Set<String> createRomanEmperors() {
+        return Set.of("Octavianus Augustus", "Tiberius", "Caligula", "Claudius", "Nero", "Galba", "Otho" );
     }
 }
