@@ -1,4 +1,4 @@
-package org.kd.functional_interface;
+package org.kd.functional_interface.custom;
 
 @FunctionalInterface
 public interface CustomFunctionalInterface {

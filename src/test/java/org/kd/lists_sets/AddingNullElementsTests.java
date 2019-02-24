@@ -15,7 +15,7 @@ public class AddingNullElementsTests {
 
         var set = new TreeSet();
         set.add(null);
-        set.add(Integer.valueOf(3));
+        set.add(3);
 
     }
 

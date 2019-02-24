@@ -5,6 +5,7 @@ import org.kd.ObjectsFactory;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -30,7 +31,7 @@ public class FlatMapExampleFactoryTest {
         assertThat(new ObjectsFactory().createListOfLists(),
 
                 is(Arrays.asList(
-                        Arrays.asList("a"),
+                        Collections.singletonList("a"),
                         Arrays.asList("b", "c"))));
     }
 

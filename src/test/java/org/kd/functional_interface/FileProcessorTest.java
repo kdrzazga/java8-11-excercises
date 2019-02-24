@@ -1,6 +1,7 @@
 package org.kd.functional_interface;
 
 import org.junit.jupiter.api.Test;
+import org.kd.functional_interface.custom.FileProcessor;
 
 import java.io.IOException;
 

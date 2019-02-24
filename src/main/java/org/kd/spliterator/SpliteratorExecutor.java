@@ -4,7 +4,6 @@ import org.kd.Person;
 
 import java.util.List;
 import java.util.Random;
-import java.util.Spliterator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -17,11 +16,11 @@ class SpliteratorExecutor {
                 .collect(Collectors.toList());
     }
 
-    private static final int randomAge() {
+    private static int randomAge() {
         return new Random().nextInt(50) + 1;
     }
 
-    private static final String randomName() {
+    private static String randomName() {
         var names = List.of("Adas", "Krzysiek", "Michal", "Antosia", "Ula");
         return names.get(new Random().nextInt(names.size()));
     }

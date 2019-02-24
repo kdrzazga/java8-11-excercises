@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import java.util.IdentityHashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class MapTests {
 

@@ -1,6 +1,7 @@
 package org.kd;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -31,7 +32,7 @@ public class ObjectsFactory {
 
     public final List<List<String>> createListOfLists() {
         return Arrays.asList(
-                Arrays.asList("a"),
+                Collections.singletonList("a"),
                 Arrays.asList("b", "c"));
     }
 

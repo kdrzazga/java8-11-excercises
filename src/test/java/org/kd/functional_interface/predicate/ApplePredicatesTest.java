@@ -1,4 +1,4 @@
-package org.kd.predicate;
+package org.kd.functional_interface.predicate;
 
 import org.junit.jupiter.api.Test;
 import org.kd.ObjectsFactory;

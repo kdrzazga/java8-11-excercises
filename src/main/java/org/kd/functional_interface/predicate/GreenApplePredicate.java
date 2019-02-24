@@ -1,4 +1,4 @@
-package org.kd.predicate;
+package org.kd.functional_interface.predicate;
 
 import org.kd.Apple;
 

@@ -3,9 +3,7 @@ package org.kd.lists_sets;
 
 import org.junit.Test;
 
-import java.awt.*;
 import java.time.DayOfWeek;
-import java.util.Date;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 

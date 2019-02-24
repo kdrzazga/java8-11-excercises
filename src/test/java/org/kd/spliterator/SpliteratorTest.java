@@ -4,9 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.kd.Person;
 
 import java.util.Spliterator;
-import java.util.concurrent.Executor;
-
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SpliteratorTest {
 

@@ -4,12 +4,15 @@ package org.kd.function;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertTrue;
 
+@RunWith(JUnit4.class)
 public class MappingEnumToCodeTest {
 
     private PrintStream oldSystemOutput;

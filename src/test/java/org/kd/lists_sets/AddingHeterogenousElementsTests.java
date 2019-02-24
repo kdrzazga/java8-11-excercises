@@ -1,8 +1,6 @@
 package org.kd.lists_sets;
 
-import org.junit.Assert;
 import org.junit.Test;
-import org.kd.ObjectsFactory;
 
 import java.util.*;
 
@@ -15,7 +13,7 @@ public class AddingHeterogenousElementsTests {
 
         var set = new TreeSet();
         set.add("kot");
-        set.add(Integer.valueOf(3));
+        set.add(3);
 
     }
 
@@ -23,7 +21,7 @@ public class AddingHeterogenousElementsTests {
     public void testHashSet() {
         HashSet hs = new HashSet();
         hs.add("kot");
-        hs.add(Integer.valueOf(3));
+        hs.add(3);
 
         assertEquals(2, hs.size());
     }
@@ -32,7 +30,7 @@ public class AddingHeterogenousElementsTests {
     public void testLinkedHashSet() {
         LinkedHashSet lhs = new LinkedHashSet();
         lhs.add("kot");
-        lhs.add(Integer.valueOf(3));
+        lhs.add(3);
         assertEquals(2, lhs.size());
     }
 }
