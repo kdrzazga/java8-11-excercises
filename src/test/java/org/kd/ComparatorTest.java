@@ -10,8 +10,7 @@ public class ComparatorTest {
 
     @Test
     public void testSortingAccordingToWeight(){
-        var apples = new Vector<Apple>();
-        apples.addAll(new ObjectsFactory().createAppleList());
+        var apples = new Vector<Apple>(new ObjectsFactory().createAppleList());
 
         apples.sort(
                 (Apple a1, Apple a2) ->
