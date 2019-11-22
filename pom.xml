@@ -11,7 +11,16 @@
         <lombok.version>1.18.10</lombok.version>
         <junit.version>5.4.0</junit.version>
         <java-hamcrest.version>2.0.0.0</java-hamcrest.version>
+        <jogl.version>2.3.2</jogl.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>tidalwave</id>
+            <name>tidalwave</name>
+            <url>http://services.tidalwave.it/nexus/content/repositories/releases/</url>
+        </repository>
+    </repositories>
 
     <groupId>org.kd</groupId>
     <artifactId>java-8-11-examples</artifactId>
@@ -82,11 +91,32 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>jogl-all</artifactId>
+            <version>${jogl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>jogl-all-main</artifactId>
+            <version>${jogl.version}</version>
+        </dependency>
         <!--<dependency>
-            <groupId>jfugue</groupId>
-            <artifactId>jfugue</artifactId>
-            <version>RELEASE</version>
+            <groupId>net.java.dev.gluegen</groupId>
+            <artifactId>gluegen-rt</artifactId>
+            <version>1.0b05</version>
         </dependency>-->
+        <dependency>
+            <groupId>org.jogamp.gluegen</groupId>
+            <artifactId>gluegen-rt-main</artifactId>
+            <version>${jogl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>jogl</artifactId>
+            <version>${jogl.version}</version>
+        </dependency>
+
 
     </dependencies>
 </project>
