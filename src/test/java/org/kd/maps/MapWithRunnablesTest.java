@@ -1,25 +1,23 @@
 package org.kd.maps;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@RunWith(JUnit4.class)
 public class MapWithRunnablesTest {
 
     private PrintStream oldSystemOutput;
     private ByteArrayOutputStream interceptedOutput;
     private MapWithRunnables mapWithRunnables;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         mapWithRunnables = new MapWithRunnables();
         this.oldSystemOutput = System.out;
@@ -52,7 +50,7 @@ public class MapWithRunnablesTest {
         assertTrue(interceptedOutput.toString().contains("-1"));
     }
 
-    @After
+    @AfterEach
     public void restoreSystemOut() {
         System.setOut(this.oldSystemOutput);
     }

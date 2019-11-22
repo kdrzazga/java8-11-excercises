@@ -1,6 +1,6 @@
 package org.kd.streams.collectors;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -15,7 +15,7 @@ public class RealtimeExample {
         var random = new Random();
         var scanner = new Scanner(System.in);
         boolean quit = false;
-        while (quit == false) {
+        while (!quit) {
             System.out.print("Enter a '+C' to start a note, " +
                     "'-C' to stop a note, 'i' for a random instrument, " +
                     "'p' for a pattern, or 'q' to quit: ");

@@ -66,7 +66,9 @@ public class Background {
     }
 
     public void importBitmap(String path) {
-        var file = new File(System.getProperty("user.dir") + "/src/main/resources/org/kd/" + path);
+
+        var fullPath = System.getProperty("user.dir") + "/src/main/resources/org/kd/" + path;
+        var file = new File(fullPath);
         try {
             var img = ImageIO.read(file);
             this.height = img.getHeight();
@@ -75,6 +77,7 @@ public class Background {
             int band = 0;
 
             pixels.clear();
+            System.out.println("Be patient. Importing " + fullPath);
             convertToPixels(img.getData().getSamples(0, 0, width, height, band, new int[width * height]));
 
             this.backgroundColor = getMostFrequentColor();
@@ -95,26 +98,9 @@ public class Background {
     private void convertToPixels(int[] bitmapSamples) {
         IntStream.range(0, bitmapSamples.length).forEach(i -> {
             var x = i % width;
-            var y = Math.round(i / height);
-
+            int y = (int) Math.round(i / (1.35 * height));
             pixels.put(new Point(x, y), colorCodes.get(bitmapSamples[i]));
-
-            //eliminateBlankLines();
         });
-    }
-
-    private void eliminateBlankLines() {
-        //TODO
-        IntStream.range(1, height).forEach(y ->
-                IntStream.range(0, width).forEach(x -> {
-                    var pixel = new Point(x, y);
-                    if (!pixels.keySet().contains(pixel)) {
-                        var upperPixelColor = pixels.get(new Point(x, y - 1));
-                        pixels.put(pixel, upperPixelColor);
-                    }
-                })
-        );
-
     }
 
     private Map<Integer, Color> findColorsOccurrence() {
@@ -128,5 +114,9 @@ public class Background {
 
     private boolean validatePoint(int x, int y) {
         return x >= 0 && x < width && y >= 0 && y < height;
+    }
+
+    public Rectangle findLimits(){
+        return new Rectangle(0, 0, width, height);
     }
 }

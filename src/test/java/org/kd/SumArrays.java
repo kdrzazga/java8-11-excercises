@@ -24,7 +24,7 @@ public class SumArrays {
 
         IntSummaryStatistics statsA = Arrays.stream(a).boxed().collect(Collectors.summarizingInt(Integer::intValue));
         IntSummaryStatistics statsB = Arrays.stream(b).boxed().collect(Collectors.summarizingInt(Integer::intValue));
-        return Optional.of(Double.valueOf(statsA.getSum() + statsB.getSum()));
+        return Optional.of((double) (statsA.getSum() + statsB.getSum()));
     }
 
 }

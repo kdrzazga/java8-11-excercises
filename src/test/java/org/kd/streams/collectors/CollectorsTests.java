@@ -5,14 +5,14 @@ import org.kd.ObjectsFactory;
 import org.kd.Person;
 
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CollectorsTests {
 
@@ -54,10 +54,8 @@ public class CollectorsTests {
                 new Person("Popiel", 775),
                 new Person("Popiel", 800)
                 ),
-                is(new ObjectsFactory().createPolishRulers().stream()
+                is(new ArrayList<>(new ObjectsFactory().createPolishRulers().stream()
                         .collect(Collectors.groupingBy(Person::getName))
-                        .get("Popiel")
-                        .stream()
-                        .collect(Collectors.toList())));
+                        .get("Popiel"))));
     }
 }

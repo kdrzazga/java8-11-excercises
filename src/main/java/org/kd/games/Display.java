@@ -76,9 +76,6 @@ public class Display {
             moveSpriteLeft(colorfulSprites.get(0));
     }
 
-    public void moveSprites() {
-
-    }
 
     public List<Sprite> getSpritesByColor(Color color) {
         return sprites

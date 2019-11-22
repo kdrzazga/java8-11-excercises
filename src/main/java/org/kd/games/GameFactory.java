@@ -1,14 +1,19 @@
 package org.kd.games;
 
+
 import java.awt.*;
 import java.util.List;
 
 public class GameFactory {
 
-    public List<Sprite> createDefaultSprites() {
+    public Animation createHorizontalAnimation(Drawer drawer){
+        return new Animation(createDefaultDisplay(), drawer, true);
+    }
+
+    private List<Sprite> createDefaultSprites() {
 
         return List.of(new Sprite(10, 10, 10, 10, new VelocityVector(0, 0), Color.BLUE),
-                new Sprite(20, 20, 10, 10, new VelocityVector(0, 0), Color.RED),
+                new Sprite(20, 20, 10, 10, new VelocityVector(5, 0), Color.RED),
                 new Sprite(50, 20, 40, 30, new VelocityVector(0, 0), Color.GREEN)
         );
     }
@@ -24,8 +29,6 @@ public class GameFactory {
     }
 
     public Display createDefaultDisplayWithAnimation() {
-        var display = new Display(createDefaultBackground(), createDefaultSprites());
-        //display.animateSpriteMoveLeft(Color.RED, 1000);
-        return display;
+        return new Display(createDefaultBackground(), createDefaultSprites());
     }
 }

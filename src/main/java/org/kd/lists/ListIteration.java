@@ -9,7 +9,7 @@ public class ListIteration {
         stringList.stream().map(String::length).filter( l -> l == 3);//TODO
         stringList.remove(0);
 
-        for (String s : stringList)
+        for (var s : stringList)
             System.out.println(s);
     }
 

@@ -18,7 +18,7 @@ public class SerializeDemo {
             out = new ObjectOutputStream(fileOut);
             out.writeObject(e);
 
-            System.out.printf("Serialized data is saved in /tmp/employee.txt");
+            System.out.print("Serialized data is saved in /tmp/employee.txt");
         } catch (IOException i) {
             i.printStackTrace();
         } finally {

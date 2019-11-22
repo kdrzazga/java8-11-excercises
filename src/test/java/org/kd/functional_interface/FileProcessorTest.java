@@ -12,10 +12,11 @@ public class FileProcessorTest {
 
     @Test
     public void testReadingFile() {
-        var fileProcessor = new FileProcessor();
-
         try {
-            assertTrue(fileProcessor.process().startsWith("Bogurodzica"));
+            assertTrue(new FileProcessor(System.getProperty("user.dir")  +"/src/test/resources/testText.txt")
+                    .process()
+                    .startsWith("Bogurodzica"));
+
         } catch (IOException e) {
             fail("I/O error");
             e.printStackTrace();

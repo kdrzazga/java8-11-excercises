@@ -25,7 +25,7 @@ public class Worker implements Runnable
             try{
                 Thread.sleep(100);
             }
-            catch (InterruptedException e){
+            catch (InterruptedException ignored){
 
             }
         }

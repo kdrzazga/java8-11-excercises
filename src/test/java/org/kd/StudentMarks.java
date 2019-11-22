@@ -15,8 +15,8 @@ public class StudentMarks {
     }
 
     private void students(){
-        var markStudentMap = Map.of(new Student("Adas", "Niezgodka"), List.of(Double.valueOf(3.0), Double.valueOf(4.5)),
-                new Student("Ala", "Makota"), List.of(Double.valueOf(4.5), Double.valueOf(3.5)));
+        var markStudentMap = Map.of(new Student("Adas", "Niezgodka"), List.of(3.0, 4.5),
+                new Student("Ala", "Makota"), List.of(4.5, 3.5));
 
         for (var key : markStudentMap.keySet()){
              var stats = markStudentMap.get(key).stream().collect(Collectors.averagingDouble(Double::doubleValue));

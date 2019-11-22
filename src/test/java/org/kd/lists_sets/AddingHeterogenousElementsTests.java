@@ -1,20 +1,21 @@
 package org.kd.lists_sets;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AddingHeterogenousElementsTests {
 
-    @Test(expected = ClassCastException.class)
+    @Test
     public void testTreeSet() {
-
-        var set = new TreeSet();
-        set.add("kot");
-        set.add(3);
-
+        Assertions.assertThrows(ClassCastException.class, () -> {
+            var set = new TreeSet();
+            set.add("kot");
+            set.add(3);
+        });
     }
 
     @Test

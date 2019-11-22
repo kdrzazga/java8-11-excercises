@@ -1,22 +1,25 @@
 package org.kd.lists_sets;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class AddingNullElementsTests {
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testTreeSet() {
 
         var set = new TreeSet();
-        set.add(null);
-        set.add(3);
-
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            set.add(null);
+            set.add(3);
+        });
     }
 
     @Test

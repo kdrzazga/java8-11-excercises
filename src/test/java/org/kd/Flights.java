@@ -28,9 +28,8 @@ class Flights {
         var flightsTo = flights.stream().filter(flight -> to.equals(flight.to)).collect(Collectors.toList());
 
         var result = new ArrayList<Flight>();
-        var iterator = flightsFrom.iterator();
-        while (iterator.hasNext()) {
-            result.addAll(flightsTo.stream().filter(flight -> flight.from.equals(iterator.next().to)).collect(Collectors.toList()));
+        for (Flight value : flightsFrom) {
+            result.addAll(flightsTo.stream().filter(flight -> flight.from.equals(value.to)).collect(Collectors.toList()));
 
         }
         return result;

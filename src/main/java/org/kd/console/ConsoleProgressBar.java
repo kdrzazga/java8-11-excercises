@@ -16,7 +16,7 @@ public class ConsoleProgressBar {
                 // do some activities
                 fw = new FileWriter("c:/temp/x.out", true);
                 fw.write(j++);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
 
             } finally {
                 fw.close();
@@ -41,7 +41,7 @@ public class ConsoleProgressBar {
 
                 fw = new FileWriter("c:/temp/x.out", true);
                 fw.write(j++);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
 
             } finally {
                 fw.close();
@@ -63,7 +63,7 @@ class ProgressBarRotating extends Thread {
             System.out.print("\r Processing " + anim.charAt(x++ % anim.length()));
             try {
                 Thread.sleep(100);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
         }
     }
@@ -81,7 +81,7 @@ class ProgressBarTraditional extends Thread {
                     + " ");
             try {
                 Thread.sleep(100);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
         }
     }

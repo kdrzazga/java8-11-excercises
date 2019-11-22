@@ -2,10 +2,10 @@ package org.kd.games;
 
 public class VelocityVector implements Cloneable {
 
-    public static final int V_MAX = 320;
-    public static final int V_MIN = 0;
-    public static final float ROTATION_UNIT = (float) (Math.PI / 10);
-    public static final int ACCELERATE_UNIT = 1;
+    private static final int V_MAX = 320;
+    private static final int V_MIN = 0;
+    private static final float ROTATION_UNIT = (float) (Math.PI / 10);
+    private static final int ACCELERATE_UNIT = 1;
 
     public int value;
     public double angle;
