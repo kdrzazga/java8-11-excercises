@@ -1,6 +1,6 @@
 package org.kd.jfugeexamples;
 
-//Im IntelliJ right-click jfugue-5.0.9.jar and choose Add to Libraries
+//Im IntelliJ right-click jfugue-5.0.9.jar and choose Add as Library
 import org.jfugue.pattern.Pattern;
 import org.jfugue.player.Player;
 import org.jfugue.rhythm.Rhythm;
