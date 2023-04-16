@@ -4,7 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.stream.IntStream;
 
-public class Arithmetics {
+public class ArithmeticsTest {
 
     @Test(groups = {"math"})
     public void sumOfEvenNumbers0to5() {

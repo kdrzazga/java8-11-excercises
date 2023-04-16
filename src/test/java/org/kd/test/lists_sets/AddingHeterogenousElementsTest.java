@@ -7,7 +7,7 @@ import java.util.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertThrows;
 
-public class AddingHeterogenousElementsTests {
+public class AddingHeterogenousElementsTest {
 
     @Test
     public void testTreeSet() {

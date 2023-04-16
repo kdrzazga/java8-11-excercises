@@ -11,7 +11,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
-public class MappingToSquareValue {
+public class MappingToSquareValueTest {
 
     /*Mapping is not only for accessing methods*/
     @Test

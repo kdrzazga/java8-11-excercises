@@ -4,7 +4,7 @@ import org.hamcrest.MatcherAssert;
 import org.kd.hamcrest_matchers.RegexMatcher;
 import org.testng.annotations.Test;
 
-public class TestCustomMatcher {
+public class CustomMatcherTest {
 
     @Test
     public void testRegularExpressionMatcher() {

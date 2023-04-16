@@ -8,7 +8,7 @@ import java.util.Optional;
 
 import static org.testng.Assert.assertEquals;
 
-public class ReduceTests {
+public class ReduceTest {
 
     @Test
     public void testReduce() {

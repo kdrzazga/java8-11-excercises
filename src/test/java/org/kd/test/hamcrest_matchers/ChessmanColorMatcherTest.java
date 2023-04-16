@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.fail;
 
-public class TestChessmanColorMatcher {
+public class ChessmanColorMatcherTest {
 
     @Test
     @Ignore//TODO

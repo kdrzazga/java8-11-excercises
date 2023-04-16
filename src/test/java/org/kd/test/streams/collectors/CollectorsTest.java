@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.is;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class CollectorsTests {
+public class CollectorsTest {
 
     private final PrintStream output = System.out;
 

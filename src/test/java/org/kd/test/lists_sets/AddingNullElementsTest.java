@@ -10,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertThrows;
 
 
-public class AddingNullElementsTests {
+public class AddingNullElementsTest {
 
     @Test
     public void testTreeSet() {

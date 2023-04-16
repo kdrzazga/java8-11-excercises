@@ -7,7 +7,7 @@ import org.kd.hamcrest_matchers.Chessman;
 import org.kd.hamcrest_matchers.ChessmanMatcher;
 import org.testng.annotations.Test;
 
-public class TestChessmanMatcher {
+public class ChessmanMatcherTest {
 
     @Test
     public void testRegularExpressionMatcher() {

@@ -8,7 +8,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 import static org.testng.Assert.assertEquals;
 
-public class CopyOnWriteArraySetTests {
+public class CopyOnWriteArraySetTest {
 
     @Test
     public void testNullAcceptation() {
