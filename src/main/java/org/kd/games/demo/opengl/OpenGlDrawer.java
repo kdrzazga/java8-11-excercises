@@ -11,7 +11,6 @@ import java.util.List;
 
 import com.jogamp.opengl.GL2;
 import static com.jogamp.opengl.GL.*;
-import static com.jogamp.opengl.GL2.GL_QUADS;
 
 @AllArgsConstructor
 public class OpenGlDrawer implements Drawer {

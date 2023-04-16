@@ -4,9 +4,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-class ChessboardFactory {
+public class ChessboardFactory {
 
-    List<BoardField> createFields() {
+    public List<BoardField> createFields() {
 
         var result = new Vector<BoardField>();
 
@@ -22,11 +22,11 @@ class ChessboardFactory {
         return result;
     }
 
-    static class BoardField {
+    public static class BoardField {
         private char x;
         private int y;
 
-        BoardField(char x, int y) {
+        public BoardField(char x, int y) {
             this.x = x;
             this.y = y;
         }

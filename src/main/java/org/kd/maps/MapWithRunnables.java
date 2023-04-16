@@ -7,15 +7,11 @@ public class MapWithRunnables {
     private int a = -1;
 
     private Map<Integer, Runnable> executiveMap = Map.of(
-            0, () -> {
-                System.out.println("zero");
-            },
+            0, () -> System.out.println("zero"),
 
             1, () -> System.out.println(1),
 
-            2, () -> {
-                a = 2;
-            },
+            2, () -> a = 2,
 
             3, () -> {
                 a = 3;

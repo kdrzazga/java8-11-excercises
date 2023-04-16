@@ -5,40 +5,30 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
+        <start-class>org.kd.TestRunner</start-class>
+
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+
         <hamcrest.version>2.0.0.0</hamcrest.version>
         <lombok.version>1.18.10</lombok.version>
-        <junit.version>5.4.0</junit.version>
+        <testng.version>7.7.0</testng.version>
         <java-hamcrest.version>2.0.0.0</java-hamcrest.version>
         <jogl.version>2.3.2</jogl.version>
+        <jfugue.version>5.0.9</jfugue.version>
     </properties>
 
-    <!--
-    <repositories>
-        <repository>
-            <id>tidalwave</id>
-            <name>tidalwave</name>
-            <url>http://services.tidalwave.it/nexus/content/repositories/releases/</url>
-        </repository>
-    </repositories>
--->
     <groupId>org.kd</groupId>
     <artifactId>java-8-11-examples</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.9-SNAPSHOT</version>
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
-            <!--<scope>test</scope>-->
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx</artifactId>
@@ -56,17 +46,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>${maven.compiler.source}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx.swing</artifactId>
-            <version>11.0.0-ea1</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>jfugue</groupId>
-            <artifactId>jfugue</artifactId>
-            <version>4.0.3</version>
-        </dependency>-->
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
@@ -75,7 +54,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
-            <version>4.1</version>
+            <version>4.3</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -92,7 +71,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jogamp.jogl</groupId>
@@ -120,18 +98,23 @@
             <version>${jogl.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
+            <groupId>org.jfugue</groupId>
+            <artifactId>jfugue</artifactId>
+            <version>${jfugue.version}</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-
-
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <!--suppress UnresolvedMavenProperty -->
+                    <groups>${groupsToRun}</groups>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

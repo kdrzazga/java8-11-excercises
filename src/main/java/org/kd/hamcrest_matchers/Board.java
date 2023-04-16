@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Board {
 
-    public final List<Chessman> chessmen = new ArrayList<Chessman>(8);
+    public final List<Chessman> chessmen = new ArrayList<>(8);
 
     public Board() {
         for (int row = 0; row < 4; row++)
