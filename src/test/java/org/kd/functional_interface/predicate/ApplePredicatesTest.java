@@ -1,9 +1,9 @@
 package org.kd.functional_interface.predicate;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.kd.ObjectsFactory;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 public class ApplePredicatesTest {
 

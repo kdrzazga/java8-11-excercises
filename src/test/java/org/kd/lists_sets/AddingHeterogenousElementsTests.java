@@ -1,17 +1,17 @@
 package org.kd.lists_sets;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertThrows;
 
 public class AddingHeterogenousElementsTests {
 
     @Test
     public void testTreeSet() {
-        Assertions.assertThrows(ClassCastException.class, () -> {
+        assertThrows(ClassCastException.class, () -> {
             var set = new TreeSet();
             set.add("kot");
             set.add(3);

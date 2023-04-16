@@ -7,7 +7,7 @@ public class InterviewTask {
     public int[] findIndicesWithSum(int[] arr, String sum) {
         int sumValue;
         try {
-            sumValue = Integer.valueOf(sum).intValue();
+            sumValue = Integer.valueOf(sum);
         } catch (NumberFormatException nfe) {
             System.err.println("Wrong number " + sum);
             return new int[0];

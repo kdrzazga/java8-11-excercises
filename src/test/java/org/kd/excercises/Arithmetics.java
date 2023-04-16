@@ -1,9 +1,8 @@
-package org.kd.excersizes;
-import org.junit.jupiter.api.Test;
+package org.kd.excercises;
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
 import java.util.stream.IntStream;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Arithmetics {
 

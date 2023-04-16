@@ -1,6 +1,6 @@
 package org.kd.streams.collectors;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.kd.ObjectsFactory;
 import org.kd.Person;
 
@@ -11,8 +11,8 @@ import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class CollectorsTests {
 

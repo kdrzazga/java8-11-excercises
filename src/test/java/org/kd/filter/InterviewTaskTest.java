@@ -1,22 +1,19 @@
 package org.kd.filter;
 
 import org.hamcrest.Matchers;
-import org.junit.Test;
 import org.kd.functional_interface.filter.InterviewTask;
+import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 public class InterviewTaskTest {
 
     @Test
-    public void testIndices(){
+    public void testIndices() {
         var testArray = new int[]{1, 2, 7, 1, 8, 1, 2, 5, 2};
         var indices = Arrays.stream(new InterviewTask().findIndicesWithSum(testArray, "9"))
                 .boxed()

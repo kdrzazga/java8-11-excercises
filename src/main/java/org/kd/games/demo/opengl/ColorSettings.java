@@ -29,7 +29,7 @@ public final class ColorSettings {
             , new Color(162, 42, 42), new OpenGlColor(1f, 0.37f, 0f)
     );
 
-    public final static void setColor(Color awtColor, GL2 gl) {
+    public static void setColor(Color awtColor, GL2 gl) {
         var openGlColor = ColorSettings.awtToGlColorMap.getOrDefault(awtColor, new ColorSettings.OpenGlColor(0, 0, 0));
 
         gl.glColor3f(openGlColor.getR(), openGlColor.getG(), openGlColor.getB());

@@ -1,10 +1,10 @@
 package org.kd.games;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.awt.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.Assert.assertEquals;
 
 public class BackgroundTest {
 

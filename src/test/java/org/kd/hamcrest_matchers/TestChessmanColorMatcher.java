@@ -1,14 +1,14 @@
 package org.kd.hamcrest_matchers;
 
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.testng.Assert.fail;
 
 public class TestChessmanColorMatcher {
 
     @Test
-    @Disabled//TODO
+    @Ignore//TODO
     public void testRegularExpressionMatcher() {
         Chessman s = new Chessman(new BoardField("a1"), 'W');
         Chessman chessmanToCompare = new Chessman(new BoardField("a1"), 'w');

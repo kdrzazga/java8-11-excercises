@@ -1,24 +1,18 @@
 package org.kd.function;
 
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-//import org.junit.runner.RunWith;
-//import org.junit.runners.JUnit4;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-//@RunWith(JUnit4.class)
+import static org.testng.Assert.assertTrue;
 public class MappingEnumToCodeTest {
 
     private PrintStream oldSystemOutput;
     private ByteArrayOutputStream interceptedOutput;
 
-    @BeforeEach
+    @BeforeMethod
     public void setUp() {
         interceptedOutput = new ByteArrayOutputStream();
         oldSystemOutput = System.out;
@@ -42,7 +36,7 @@ public class MappingEnumToCodeTest {
         assertTrue(interceptedOutput.toString().contains("a=5"));
     }
 
-    @AfterEach
+    @AfterMethod
     public void restoreSystemOutput() {
         System.setOut(oldSystemOutput);
     }

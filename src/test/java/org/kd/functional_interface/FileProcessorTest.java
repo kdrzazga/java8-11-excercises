@@ -1,12 +1,12 @@
 package org.kd.functional_interface;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.kd.functional_interface.custom.FileProcessor;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
 
 public class FileProcessorTest {
 

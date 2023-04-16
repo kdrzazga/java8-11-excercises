@@ -1,7 +1,7 @@
 package org.kd.oop;
 
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,13 +9,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Vector;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.Assert.*;
 
 public class Casting {
 
     @Test
     public void testCasting() {
-        Integer original = Integer.valueOf(3);
+        Integer original = 3;
         Object object = original;
         assertEquals(3, ((Integer) object).intValue());
     }

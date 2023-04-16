@@ -1,13 +1,13 @@
 package org.kd.streams;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.kd.ObjectsFactory;
 import org.kd.Person;
 
 import java.util.Vector;
 import java.util.stream.IntStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 public class DistinctTest {
 

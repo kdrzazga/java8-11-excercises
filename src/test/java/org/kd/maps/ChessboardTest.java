@@ -1,11 +1,10 @@
 package org.kd.maps;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.kd.maps.ChessboardFactory.BoardField;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 public class ChessboardTest {
 

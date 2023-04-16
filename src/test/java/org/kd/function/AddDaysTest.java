@@ -1,10 +1,10 @@
 package org.kd.function;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.util.Calendar;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 public class AddDaysTest {
 

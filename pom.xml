@@ -9,7 +9,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <hamcrest.version>2.0.0.0</hamcrest.version>
         <lombok.version>1.18.10</lombok.version>
-        <junit.version>5.4.0</junit.version>
+        <testng.version>7.7.0</testng.version>
         <java-hamcrest.version>2.0.0.0</java-hamcrest.version>
         <jogl.version>2.3.2</jogl.version>
     </properties>
@@ -27,18 +27,14 @@
     <artifactId>java-8-11-examples</artifactId>
     <version>0.2-SNAPSHOT</version>
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
-            <!--<scope>test</scope>-->
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx</artifactId>
@@ -56,17 +52,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>${maven.compiler.source}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx.swing</artifactId>
-            <version>11.0.0-ea1</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>jfugue</groupId>
-            <artifactId>jfugue</artifactId>
-            <version>4.0.3</version>
-        </dependency>-->
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
@@ -119,19 +104,5 @@
             <artifactId>jogl</artifactId>
             <version>${jogl.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-
-
     </dependencies>
 </project>

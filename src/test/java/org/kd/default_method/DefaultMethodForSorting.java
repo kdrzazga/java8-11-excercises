@@ -1,6 +1,6 @@
 package org.kd.default_method;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.Comparator;

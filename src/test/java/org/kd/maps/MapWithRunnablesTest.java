@@ -1,15 +1,15 @@
 package org.kd.maps;
 
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class MapWithRunnablesTest {
 
@@ -17,7 +17,7 @@ public class MapWithRunnablesTest {
     private ByteArrayOutputStream interceptedOutput;
     private MapWithRunnables mapWithRunnables;
 
-    @BeforeEach
+    @BeforeMethod
     public void setUp() {
         mapWithRunnables = new MapWithRunnables();
         this.oldSystemOutput = System.out;
@@ -50,7 +50,7 @@ public class MapWithRunnablesTest {
         assertTrue(interceptedOutput.toString().contains("-1"));
     }
 
-    @AfterEach
+    @AfterMethod
     public void restoreSystemOut() {
         System.setOut(this.oldSystemOutput);
     }

@@ -1,9 +1,9 @@
 package org.kd.functional_interface;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.kd.functional_interface.custom.ChurchNumeral;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 
 public class ChurchNumeralTest {

@@ -1,6 +1,6 @@
 package org.kd.maps;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import java.util.IdentityHashMap;
 import java.util.LinkedHashMap;
 

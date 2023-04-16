@@ -9,9 +9,7 @@ class ModeToCodeMapsFactory {
 
     Map<Modes, Runnable> createMappingToRunnable() {
         return Map.of(
-                Modes.CONTROL, () -> {
-                    System.out.println("Control mode");
-                });
+                Modes.CONTROL, () -> System.out.println("Control mode"));
     }
 
     Map<Modes, Supplier> createMappingToSupplier() {

@@ -20,7 +20,7 @@ public class StudentMarks {
 
         for (var key : markStudentMap.keySet()){
              var stats = markStudentMap.get(key).stream().collect(Collectors.averagingDouble(Double::doubleValue));
-            System.out.println(key.name + " " +key.lastName + " " + stats.doubleValue());
+            System.out.println(key.name + " " +key.lastName + " " + stats);
         }}
 
     class Student{

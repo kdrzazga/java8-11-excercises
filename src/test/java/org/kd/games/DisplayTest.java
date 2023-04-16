@@ -1,14 +1,14 @@
 package org.kd.games;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.awt.*;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.fail;
 
 public class DisplayTest {
 

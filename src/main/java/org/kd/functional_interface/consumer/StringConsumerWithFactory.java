@@ -27,7 +27,7 @@ public class StringConsumerWithFactory {
         return (list) -> {
             var sb = new StringBuilder();
             list.forEach(s -> sb.append(s));
-            System.out.println(sb.toString());
+            System.out.println(sb);
         };
     }
 }

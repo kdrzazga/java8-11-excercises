@@ -1,7 +1,7 @@
 package org.kd.flatMaps;
 
-import org.junit.jupiter.api.Test;
 import org.kd.ObjectsFactory;
+import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.Collection;

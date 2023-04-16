@@ -1,6 +1,6 @@
 package org.kd.spliterator;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.kd.Person;
 
 import java.util.Spliterator;
