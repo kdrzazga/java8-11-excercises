@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class SpliteratorExecutor {
+public class SpliteratorExecutor {
 
     public static List<Person> generateElements() {
 

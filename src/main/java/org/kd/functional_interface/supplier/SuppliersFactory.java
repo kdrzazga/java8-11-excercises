@@ -8,18 +8,18 @@ import java.util.stream.Stream;
 
 public class SuppliersFactory {
 
-    Supplier<Stream<String>> createRulersSupplier() {
+    public Supplier<Stream<String>> createRulersSupplier() {
         Stream<String> rulersStream = new ObjectsFactory().createPolishRulers().stream().map(Person::getName);
         return () -> rulersStream;
     }
 
     //for comparision
-    Stream<String> createRulersStream() {
+    public Stream<String> createRulersStream() {
         Stream<String> rulersStream = new ObjectsFactory().createPolishRulers().stream().map(Person::getName);
         return rulersStream;
     }
 
-    Supplier<Integer> createIntegerSupplier() {
+    public Supplier<Integer> createIntegerSupplier() {
         //return (x) -> 1981; ERROR, no arguments is required
         return () -> 1981;
     }

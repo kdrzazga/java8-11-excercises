@@ -5,34 +5,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
+        <start-class>org.kd.TestRunner</start-class>
+
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+
         <hamcrest.version>2.0.0.0</hamcrest.version>
         <lombok.version>1.18.10</lombok.version>
         <testng.version>7.7.0</testng.version>
         <java-hamcrest.version>2.0.0.0</java-hamcrest.version>
         <jogl.version>2.3.2</jogl.version>
+        <jfugue.version>5.0.9</jfugue.version>
     </properties>
 
-    <!--
-    <repositories>
-        <repository>
-            <id>tidalwave</id>
-            <name>tidalwave</name>
-            <url>http://services.tidalwave.it/nexus/content/repositories/releases/</url>
-        </repository>
-    </repositories>
--->
     <groupId>org.kd</groupId>
     <artifactId>java-8-11-examples</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.9-SNAPSHOT</version>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -77,7 +71,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jogamp.jogl</groupId>
@@ -104,5 +97,49 @@
             <artifactId>jogl</artifactId>
             <version>${jogl.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.jfugue</groupId>
+            <artifactId>jfugue</artifactId>
+            <version>${jfugue.version}</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-5</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>${start-class}</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>assemble-all</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <!--suppress UnresolvedMavenProperty -->
+                    <groups>${groupsToRun}</groups>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

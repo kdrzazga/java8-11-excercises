@@ -42,7 +42,7 @@ public class ArrayInitializer {
         return array;
     }
 
-    static int[] initializeArrayRangeUsingArraysFill() {
+    public static int[] initializeArrayRangeUsingArraysFill() {
         int[] array = new int[5];
         Arrays.fill(array, 0, 3, -50);
         return array;
@@ -58,7 +58,7 @@ public class ArrayInitializer {
         return Arrays.copyOf(array, 6);
     }
 
-    static int[] initializeArrayUsingArraysSetAll() {
+    public static int[] initializeArrayUsingArraysSetAll() {
         int[] array = new int[5];
 
         Arrays.setAll(array, p -> p >= 3 ? 0 : p);
