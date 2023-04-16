@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('checkout'){
             steps {
-                git 'https://github.com/kdrzazga/Banque'
+                git 'https://github.com/kdrzazga/java8-11-excercises'
             }
             post {
                 always {
